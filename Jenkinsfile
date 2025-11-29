@@ -3,33 +3,33 @@ pipeline {
 
   stages {
    
-   stage(‘clone project’) {
+   stage('clone project') {
       steps {
-           git branch:’master’ , url:’https://github.com/PraveenKuberABC/Amazon-Ecom.git'
+           git branch:'master' , url:'https://github.com/PraveenKuberABC/Amazon-Ecom.git'
        }
    }
 
-   stage(‘clean’) {
+   stage('clean') {
       steps {
-           sh ‘mvn clean’
+           sh 'mvn clean'
        }
    }
 
-   stage(‘compile’) {
+   stage('compile') {
       steps {
-           sh ‘mvn compile’
+           sh 'mvn compile'
        }
    }
 
-   stage(‘test’) {
+   stage('test') {
       steps {
-           sh ‘mvn test’
+           sh 'mvn test'
        }
    }
 
-   stage(‘build’) {
+   stage('build') {
       steps {
-           sh ‘mvn clean install’
+           sh 'mvn clean install'
        }
    }
 
